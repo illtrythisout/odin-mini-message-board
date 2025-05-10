@@ -14,8 +14,9 @@ app.set('view engine', 'ejs');
 const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath));
 
-// Temporary root get
-app.get('/', (req, res) => res.send('Hello, World!'));
+// import and initiate routers
+const indexRouter = require('./routes/indexRouter');
+app.use('/', indexRouter);
 
 // To handle errors
 // Every thrown error in the application or the previous middleware function calling `next` with an error as an argument will eventually go to this middleware function
