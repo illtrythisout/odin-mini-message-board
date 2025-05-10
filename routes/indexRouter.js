@@ -12,7 +12,7 @@ const messages = [
 ];
 
 router.get('/', (req, res) => {
-  res.send({ messages: messages });
+  res.render('index', { messages: messages });
 });
 
 module.exports = router;
