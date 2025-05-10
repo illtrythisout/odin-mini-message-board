@@ -17,12 +17,6 @@
       <p class="subtitle">pls be nice</p>
     </div>
 
-    <div class="message-board">
-      <% messages.forEach(message => { %>
-      <p><%= message.user %></p>
-      <p><%= message.added %></p>
-      <p><%= message.text %></p>
-      <% }) %>
-    </div>
+    <%- include('messagesDisplay', {messages: messages}) %>
   </body>
 </html>
