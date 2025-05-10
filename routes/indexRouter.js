@@ -11,12 +11,19 @@ const messages = [
   },
 ];
 
-router.get('/', (req, res) => {
-  res.render('index', { messages: messages });
-});
+router.get('/', (req, res) => res.render('index', { messages: messages }));
 
-router.route('/new').get((req, res) => {
-  res.render('form');
-});
+router
+  .route('/new')
+  .get((req, res) => res.render('form'))
+  .post((req, res) => {
+    messages.push({
+      text: req.body.text,
+      user: req.body.user,
+      added: new Date(),
+    });
+
+    res.redirect('/');
+  });
 
 module.exports = router;
