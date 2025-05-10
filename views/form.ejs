@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Board</title>
+  </head>
+  <body>
+    <div class="titleContainer">
+      <h1>New Message</h1>
+      <p class="subtitle">pls be nice</p>
+    </div>
+
+    <div class="content-div form-container">
+      <form method="post" action="/new">
+        <div class="inputContainer">
+          <label for="userInput">Your Name:</label>
+          <input type="text" name="user" id="userInput" />
+        </div>
+        <div class="inputContainer">
+          <label for="textInput">Message</label>
+          <textarea name="text" id="textInput"></textarea>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

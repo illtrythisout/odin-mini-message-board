@@ -14,9 +14,14 @@
         with
         <b>Express</b>
       </p>
-      <p class="subtitle">pls be nice</p>
     </div>
 
-    <%- include('messagesDisplay', {messages: messages}) %>
+    <div class="content-div message-board">
+      <% messages.forEach(message => { %>
+      <p><%= message.user %></p>
+      <p><%= message.added %></p>
+      <p><%= message.text %></p>
+      <% }) %>
+    </div>
   </body>
 </html>
