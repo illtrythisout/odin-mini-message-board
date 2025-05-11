@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message Board</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="titleContainer">
+    <div class="container-div titleContainer">
       <h1>Mini Message Board</h1>
       <p class="subtitle">
         A <b>Node.js</b> project for
@@ -16,16 +17,18 @@
       </p>
     </div>
 
-    <div class="content-div message-board">
-      <a href="/new">Write a Message</a>
+    <div class="container-div message-board">
+      <a class="button-link" href="/new">Write a Message</a>
       <% messages.forEach(message => { %>
-      <p><%= message.user %></p>
-      <p>
-        <%=
-        `${message.added.getDate()}/${message.added.getMonth()}/${message.added.getFullYear()}`
-        %>
-      </p>
-      <p><%= message.text %></p>
+      <hr />
+      <div class="message-container">
+        <p><b>Author:</b> <%= message.user %></p>
+        <p class="message-date">
+          <b>Date added:</b>
+          <%=`${message.added.getDate()}/${message.added.getMonth()}/${message.added.getFullYear()}`%>
+        </p>
+        <p><b>Message:</b> <%= message.text %></p>
+      </div>
       <% }) %>
     </div>
   </body>
