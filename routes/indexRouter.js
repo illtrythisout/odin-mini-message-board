@@ -21,7 +21,7 @@ router
   .route('/new')
   .get((req, res) => res.render('form'))
   .post((req, res) => {
-    messages.push({
+    messages.unshift({
       text: req.body.text,
       user: req.body.user,
       added: new Date(),
