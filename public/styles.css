@@ -110,6 +110,9 @@ textarea:focus {
 .message-date {
   justify-self: end;
 }
+.message-text {
+  grid-column: 1 / -1;
+}
 
 .inputContainer {
   display: flex;
