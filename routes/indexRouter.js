@@ -2,12 +2,16 @@ const { Router } = require('express');
 const router = Router();
 
 const messages = [
-  { text: 'Oooh Weee', user: 'Mr. Poopybutthole', added: new Date() },
-  { text: 'Get Schwifty', user: 'Big Head', added: new Date() },
+  { text: 'Get Schwifty', user: 'Big Head', added: new Date('2015-8-23') },
+  {
+    text: 'Oooh Weee',
+    user: 'Mr. Poopybutthole',
+    added: new Date('2015-8-16'),
+  },
   {
     text: "Hi, I'm Mr. Meeseeks!",
     user: 'Mr. Meeseeks',
-    added: new Date(),
+    added: new Date('2014-8-20'),
   },
 ];
 

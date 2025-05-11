@@ -25,7 +25,8 @@
         <p><b>Author:</b> <%= message.user %></p>
         <p class="message-date">
           <b>Date added:</b>
-          <%=`${message.added.getDate()}/${message.added.getMonth()}/${message.added.getFullYear()}`%>
+          <%=`${message.added.getDate()}/${message.added.getMonth() +
+          1}/${message.added.getFullYear()}`%>
         </p>
         <p class="message-text"><b>Message:</b> <%= message.text %></p>
       </div>
